@@ -14,11 +14,29 @@ export function Contact() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+
+  const response = await fetch("https://formspree.io/f/xrbqwzke", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    }),
+  })
+
+  if (response.ok) {
     alert("Thank you for your message!")
     setFormData({ name: "", email: "", message: "" })
+  } else {
+    alert("Something went wrong. Please try again.")
   }
+}
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
