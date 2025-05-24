@@ -1,7 +1,9 @@
 "use client"
 
 import type * as React from "react"
-import { Brain, FileText, Users, Phone, Target, Wrench, Calendar, Home } from "lucide-react"
+import {
+  Brain, FileText, Users, Phone, Target, Wrench, Calendar, Home,
+} from "lucide-react"
 
 import {
   Sidebar,
@@ -35,13 +37,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   return (
     <Sidebar variant="inset" {...props}>
-      <SidebarHeader className="p-6 bg-gradient-to-r from-blue-600 to-purple-600">
+      <SidebarHeader className="p-6 bg-gradient-to-r from-blue-600 to-purple-600 shadow-md">
         <div className="flex items-center gap-3 animate-fade-in">
-          <Brain className="h-6 w-6 text-white animate-pulse" />
-          <span className="font-semibold text-white">Bipolar Tracker</span>
+          <div className="bg-white/10 p-2 rounded-full shadow-inner backdrop-blur-sm">
+            <Brain className="h-6 w-6 text-white animate-pulse" />
+          </div>
+          <span className="font-bold text-white text-lg tracking-wide">Bipolar Tracker</span>
         </div>
       </SidebarHeader>
-      <SidebarContent className="bg-gradient-to-b from-gray-50 to-white">
+
+      <SidebarContent className="bg-gradient-to-b from-gray-50 via-white to-slate-50 shadow-inner">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -53,10 +58,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 >
                   <SidebarMenuButton
                     onClick={() => scrollToSection(item.url)}
-                    className="hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-105 hover:shadow-sm"
+                    className="flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:shadow-md hover:scale-[1.02]"
                   >
-                    <item.icon className={`h-4 w-4 ${item.color} transition-transform duration-300 hover:scale-110`} />
-                    <span className="transition-all duration-300">{item.title}</span>
+                    <item.icon className={`h-5 w-5 ${item.color} transition-transform duration-200 group-hover:scale-110`} />
+                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
+                      {item.title}
+                    </span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

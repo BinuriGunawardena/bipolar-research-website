@@ -81,7 +81,7 @@ export function Documents() {
       members: "Karunarathne D. H",
       color: "from-teal-400 to-cyan-500",
       filePath: "/documents/final-report-karunarathne.pdf",
-      externalUrl: "https://drive.google.com/file/d/1rShOm3S8vPIWtg7zfqXL--C00-l4D_4c/view?usp=drive_link",
+      externalUrl: "https://drive.google.com/file/d/1LjTePaPHWYGWotX8CLAn2_KPR6sB5xM9/view?usp=drive_link",
       fileSize: "964 KB",
       downloadMethod: "external",
       category: "document",
@@ -92,9 +92,9 @@ export function Documents() {
       members: "Gunarathna T.M.T.N",
       color: "from-violet-400 to-purple-500",
       filePath: "/documents/final-report-gunarathna.pdf",
-      externalUrl: "https://drive.google.com/file/d/1LjTePaPHWYGWotX8CLAn2_KPR6sB5xM9/view?usp=drive_link",
+      externalUrl: "https://drive.google.com/file/d/1chBH7aW5e-aQKHboeX3cyAC3LRAxgQaq/view?usp=drive_link",
       fileSize: "1 MB",
-      downloadMethod: "direct",
+      downloadMethod: "external",
       category: "document",
     },
     {
@@ -103,9 +103,9 @@ export function Documents() {
       members: "Gunawardena B. D",
       color: "from-emerald-400 to-green-500",
       filePath: "/documents/final-report-gunawardena.pdf",
-      externalUrl: "https://drive.google.com/file/d/1chBH7aW5e-aQKHboeX3cyAC3LRAxgQaq/view?usp=drive_link",
+      externalUrl: "https://drive.google.com/file/d/1rShOm3S8vPIWtg7zfqXL--C00-l4D_4c/view?usp=drive_link",
       fileSize: "1.3 MB",
-      downloadMethod: "direct",
+      downloadMethod: "external",
       category: "document",
     },
   ]
@@ -197,64 +197,74 @@ export function Documents() {
   }
 
   const renderItemCard = (item: any, index: number, isPresentation = false) => (
-    <div
-      key={index}
-      className="flex items-center justify-between p-6 bg-white rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group animate-slide-in"
-      style={{ animationDelay: `${index * 100}ms` }}
-    >
-      <div className="flex items-center gap-4">
-        <div
-          className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}
-        >
-          {isPresentation ? (
-            <Presentation className="h-6 w-6 text-white" />
-          ) : (
-            <FileText className="h-6 w-6 text-white" />
-          )}
-        </div>
-        <div>
-          <h3 className="text-lg font-medium text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-            {item.title}
-          </h3>
-          <p className="text-sm text-gray-500">
-            {item.date} • {item.members}
-          </p>
-          <p className="text-xs text-gray-400 mt-1">
-            {item.fileSize} • {isPresentation ? "PPTX" : "PDF"}
-          </p>
-        </div>
-      </div>
-      <Button
-        onClick={() => handleDownload(item)}
-        className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+  <div
+    key={index}
+    className="p-6 rounded-2xl border-l-4 shadow-md hover:shadow-xl transition-all duration-300 group animate-fade-in flex flex-col justify-between h-full"
+    style={{
+      animationDelay: `${index * 100}ms`,
+      borderColor: `var(--tw-gradient-to)`,
+      background: `linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to))`,
+    }}
+  >
+    <div className="flex items-center gap-4 mb-4">
+      <div
+        className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}
       >
-        {getDownloadIcon(item.downloadMethod)}
-        {getButtonText(item.downloadMethod)}
-      </Button>
+        {isPresentation ? (
+          <Presentation className="h-8 w-8 text-white" />
+        ) : (
+          <FileText className="h-8 w-8 text-white" />
+        )}
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-sm text-gray-700">{item.date}</p>
+        <p className="text-sm text-gray-600">{item.members}</p>
+        <p className="text-xs text-white mt-1 font-medium">
+          {item.fileSize} • {isPresentation ? "PPTX" : "PDF"}
+        </p>
+      </div>
     </div>
-  )
+
+    <Button
+      onClick={() => handleDownload(item)}
+      className="w-full mt-auto bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-pink-500 hover:to-indigo-600 text-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+    >
+      {getDownloadIcon(item.downloadMethod)}
+      {getButtonText(item.downloadMethod)}
+    </Button>
+  </div>
+)
+
+
 
   return (
-    <section id="documents" className="py-20 px-6 bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-light text-gray-900 mb-16 text-center animate-fade-in">
-          Documents & Presentations
-        </h2>
+  <section id="documents" className="py-20 px-6 bg-gradient-to-br from-cyan-50 via-indigo-50 to-pink-50">
+    <div className="max-w-5xl mx-auto">
+      <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center animate-fade-in">
+        📚 Documents & 🎞 Presentations
+      </h2>
 
-        {/* Documents Section */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-medium text-gray-800 mb-8 animate-fade-in">📄 Documents</h3>
-          <div className="space-y-6">{documents.map((doc, index) => renderItemCard(doc, index, false))}</div>
-        </div>
-
-        {/* Presentations Section */}
-        <div>
-          <h3 className="text-2xl font-medium text-gray-800 mb-8 animate-fade-in">🎯 Presentations</h3>
-          <div className="space-y-6">
-            {presentations.map((presentation, index) => renderItemCard(presentation, index, true))}
-          </div>
+      {/* Documents Section */}
+      <div className="mb-16">
+        <h3 className="text-2xl font-semibold text-purple-700 mb-8 animate-fade-in">📄 Documents</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {documents.map((doc, index) => renderItemCard(doc, index, false))}
         </div>
       </div>
-    </section>
-  )
+
+      {/* Presentations Section */}
+      <div>
+        <h3 className="text-2xl font-semibold text-blue-700 mb-8 animate-fade-in">🎯 Presentations</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {presentations.map((presentation, index) => renderItemCard(presentation, index, true))}
+        </div>
+      </div>
+    </div>
+  </section>
+)
+
+
 }
