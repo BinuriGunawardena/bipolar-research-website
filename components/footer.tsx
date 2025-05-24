@@ -69,7 +69,7 @@ export function Footer() {
           className="border-t border-gray-700 mt-8 pt-8 text-center animate-fade-in"
           style={{ animationDelay: "600ms" }}
         >
-          <p className="text-gray-400">© {currentYear} Bipolar Disorder Tracker Research Project.</p>
+          <p className="text-gray-400">© {currentYear} Bipolar Disorder Tracker. Final Year Research Project.</p>
         </div>
       </div>
     </footer>
