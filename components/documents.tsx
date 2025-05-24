@@ -33,7 +33,7 @@ export function Documents() {
       members: "All Members",
       color: "from-purple-400 to-pink-500",
       filePath: "/documents/topic-assessment.pdf",
-      externalUrl: "https://drive.google.com/file/d/your-file-id/view",
+      externalUrl: "https://drive.google.com/file/d/1rkV5UBsUhSi5rgrsyOdNagpw1k_IVxvT/view?usp=drive_link",
       fileSize: "1.2 MB",
       downloadMethod: "external",
       category: "document",
