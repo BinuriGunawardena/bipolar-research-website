@@ -37,16 +37,20 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   return (
     <Sidebar variant="inset" {...props}>
-      <SidebarHeader className="p-6 bg-gradient-to-r from-blue-600 to-purple-600 shadow-md">
+      <SidebarHeader className="p-4 bg-[#0D0B23] shadow-md">
         <div className="flex items-center gap-3 animate-fade-in">
-          <div className="bg-white/10 p-2 rounded-full shadow-inner backdrop-blur-sm">
-            <Brain className="h-6 w-6 text-white animate-pulse" />
+          <div className="flex items-center gap-3">
+            <img
+              src="/images/BipoLink.png" // Ensure this path matches your project
+              alt="BipoLink Logo"
+              className="h-10 w-10 object-contain"
+            />
           </div>
-          <span className="font-bold text-white text-lg tracking-wide">Bipolar Tracker</span>
+          <span className="font-bold text-white text-lg tracking-wide">BipoLink</span>
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="bg-gradient-to-b from-gray-50 via-white to-slate-50 shadow-inner">
+      <SidebarContent className="bg-gradient-to-b from-[#1a1c33] via-[#212443] to-[#292b4d] text-white shadow-md">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -58,10 +62,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 >
                   <SidebarMenuButton
                     onClick={() => scrollToSection(item.url)}
-                    className="flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:shadow-md hover:scale-[1.02]"
+                    className="flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 hover:scale-[1.03] hover:shadow"
                   >
                     <item.icon className={`h-5 w-5 ${item.color} transition-transform duration-200 group-hover:scale-110`} />
-                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
+                    <span className="text-sm font-medium text-white group-hover:text-yellow-100 transition-colors">
                       {item.title}
                     </span>
                   </SidebarMenuButton>

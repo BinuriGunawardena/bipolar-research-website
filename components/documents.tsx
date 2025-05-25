@@ -289,7 +289,7 @@ export function Documents() {
     <section id="documents" className="py-20 px-6 bg-gradient-to-br from-cyan-50 via-indigo-50 to-pink-50">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center animate-fade-in">
-          📚 Documents & 🎞 Presentations
+        Documents & Presentations
         </h2>
 
         <div className="mb-16">

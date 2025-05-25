@@ -1,12 +1,12 @@
 "use client"
 
-import { Brain, Sparkles } from "lucide-react"
+import { Sparkles } from "lucide-react"
 
 export function Header() {
   return (
     <section
       id="home"
-      className="py-24 px-6 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden"
+      className="py-24 px-6 bg-[#0D0B23] text-white relative overflow-hidden"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
@@ -17,12 +17,18 @@ export function Header() {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
-          <div className="relative">
-            <Brain className="h-16 w-16 text-white animate-pulse" />
+          <div className="relative animate-float">
+            <img
+              src="/images/BipoLink.png"
+              alt="BipoLink Logo"
+              className="h-20 w-20 object-contain"
+            />
             <Sparkles className="h-6 w-6 text-yellow-300 absolute -top-2 -right-2 animate-spin" />
           </div>
         </div>
-        <h1 className="text-5xl md:text-7xl font-light text-white mb-6 animate-slide-up">Bipolar Disorder Tracker</h1>
+        <h1 className="text-5xl md:text-7xl font-light text-white mb-6 animate-slide-up">
+          Bipolar Disorder Tracker
+        </h1>
         <p className="text-xl text-blue-100 mb-4 animate-slide-up" style={{ animationDelay: "200ms" }}>
           Final Year Research Project
         </p>

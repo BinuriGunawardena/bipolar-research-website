@@ -76,9 +76,7 @@ export default function App() {
         <SidebarInset>
           <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4 sticky top-0 bg-white/90 backdrop-blur-sm z-40 transition-all duration-300">
             <SidebarTrigger className="-ml-1 hover:bg-blue-50 transition-colors duration-300" />
-            <span className="text-sm bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-medium ml-2">
-              Bipolar Disorder Tracker
-            </span>
+            
           </header>
           <main className="flex-1">
             <Header />
