@@ -87,7 +87,7 @@ export function Documents() {
     // Final Reports
     {
       title: "Final Report - All Members",
-      date: "Apr 20, 2025",
+      date: "Apr 12, 2025",
       members: "All Members",
       color: "from-pink-400 to-rose-500",
       filePath: "/documents/final-report-group.pdf",
@@ -98,7 +98,7 @@ export function Documents() {
     },
     {
       title: "Final Report - Karunarathne D. H",
-      date: "Apr 20, 2025",
+      date: "Apr 12, 2025",
       members: "Karunarathne D. H",
       color: "from-teal-400 to-cyan-500",
       filePath: "/documents/final-report-karunarathne.pdf",
@@ -109,7 +109,7 @@ export function Documents() {
     },
     {
       title: "Final Report - Gunarathna T.M.T.N",
-      date: "Apr 20, 2025",
+      date: "Apr 12, 2025",
       members: "Gunarathna T.M.T.N",
       color: "from-violet-400 to-purple-500",
       filePath: "/documents/final-report-gunarathna.pdf",
@@ -120,7 +120,7 @@ export function Documents() {
     },
     {
       title: "Final Report - Gunawardena B. D",
-      date: "Apr 20, 2025",
+      date: "Apr 12, 2025",
       members: "Gunawardena B. D",
       color: "from-emerald-400 to-green-500",
       filePath: "/documents/final-report-gunawardena.pdf",
@@ -171,8 +171,8 @@ export function Documents() {
       members: "All Members",
       color: "from-purple-400 to-violet-500",
       filePath: "/presentations/final-presentation.pptx",
-      externalUrl: "https://drive.google.com/file/d/your-presentation-id-4/view",
-      fileSize: "To be Submitted",
+      externalUrl: "https://docs.google.com/presentation/d/1q4nhbPT1gTwttx7C3kzskN0epwkjBPkW/edit?usp=drive_link&ouid=103923215809507449603&rtpof=true&sd=true",
+      fileSize: "16.7 MB",
       downloadMethod: "external",
       category: "presentation",
     },

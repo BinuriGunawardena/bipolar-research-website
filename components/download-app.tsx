@@ -34,7 +34,7 @@ export function DownloadApp() {
         <p className="text-sm text-gray-300">
           Don’t have a QR scanner?{" "}
           <a
-            href="https://qrco.de/bg1oV0"
+            href="https://qrco.de/bg1rP9"
             target="_blank"
             rel="noopener noreferrer"
             className="underline text-blue-400 hover:text-blue-300"
