@@ -43,6 +43,11 @@ export function Footer() {
                   Documents
                 </a>
               </li>
+              <li>
+                <a href="#download-app" className="hover:text-pink-400 transition-colors duration-300 hover:underline">
+                  App
+                </a>
+              </li>
             </ul>
           </div>
 

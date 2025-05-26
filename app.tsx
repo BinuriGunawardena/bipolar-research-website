@@ -10,7 +10,9 @@ import { Documents } from "./components/documents"
 import { Team } from "./components/team"
 import { Contact } from "./components/contact"
 import { Footer } from "./components/footer"
+import { DownloadApp }  from "./components/download-app"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { Download } from "lucide-react"
 
 export default function App() {
   return (
@@ -86,8 +88,10 @@ export default function App() {
             <Milestones />
             <Documents />
             <Team />
+            <DownloadApp/>
             <Contact />
             <Footer />
+
           </main>
         </SidebarInset>
       </SidebarProvider>

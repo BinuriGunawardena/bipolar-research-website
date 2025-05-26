@@ -2,7 +2,7 @@
 
 import type * as React from "react"
 import {
-  Brain, FileText, Users, Phone, Target, Wrench, Calendar, Home,
+  Brain, FileText, Users, Phone, Target, Wrench, Calendar, Home, Smartphone
 } from "lucide-react"
 
 import {
@@ -24,6 +24,7 @@ const navigationItems = [
   { title: "Milestones", url: "#milestones", icon: Calendar, color: "text-red-600" },
   { title: "Documents", url: "#documents", icon: FileText, color: "text-indigo-600" },
   { title: "Team", url: "#team", icon: Users, color: "text-pink-600" },
+  { title: "Download App", url: "#download", icon: Smartphone, color: "text-yellow-400" },
   { title: "Contact", url: "#contact", icon: Phone, color: "text-teal-600" },
 ]
 
@@ -41,7 +42,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <div className="flex items-center gap-3 animate-fade-in">
           <div className="flex items-center gap-3">
             <img
-              src="/images/BipoLink.png" // Ensure this path matches your project
+              src="/images/BipoLink.png" 
               alt="BipoLink Logo"
               className="h-10 w-10 object-contain"
             />
