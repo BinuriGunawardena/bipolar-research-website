@@ -21,8 +21,9 @@ export function Header() {
             <img
               src="/images/BipoLink.png"
               alt="BipoLink Logo"
-              className="h-20 w-20 object-contain"
+              className="h-20 w-20 object-contain rounded-full"
             />
+
             <Sparkles className="h-6 w-6 text-yellow-300 absolute -top-2 -right-2 animate-spin" />
           </div>
         </div>
