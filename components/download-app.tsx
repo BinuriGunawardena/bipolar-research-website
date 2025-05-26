@@ -4,23 +4,45 @@ import Image from "next/image"
 
 export function DownloadApp() {
   return (
-    <section id="download" className="py-20 px-6 bg-gradient-to-br from-[#1a1c33] via-[#212443] to-[#292b4d] text-white text-center">
-      <h2 className="text-4xl font-semibold mb-6">Download Our App</h2>
-      <p className="text-lg mb-6 max-w-xl mx-auto">
-        Scan the QR code below to download the BipoLink mobile app for Android.
-      </p>
-      <div className="flex justify-center">
-        <Image
-          src="/images/BipoLinkQR.png" 
-          alt="QR Code to download app"
-          width={200}
-          height={200}
-          className="rounded-lg shadow-lg"
-        />
+    <section
+      id="download"
+      className="relative py-24 px-6 text-white text-center bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('/images/website1.jpeg')`,
+      }}
+    >
+      {/* Overlay for dark gradient effect */}
+      <div className="absolute inset-0 bg-[#0d0b23]/80 backdrop-blur-sm" />
+
+      {/* Content over background */}
+      <div className="relative z-10 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-semibold mb-4">Download Our App</h2>
+        <p className="text-lg text-gray-200 mb-8">
+          Scan the QR code below to download the BipoLink mobile app for Android.
+        </p>
+
+        <div className="flex justify-center mb-4">
+          <Image
+            src="/images/BipoLinkQR.png"
+            alt="QR Code to download app"
+            width={200}
+            height={200}
+            className="rounded-lg shadow-lg border border-white/10"
+          />
+        </div>
+
+        <p className="text-sm text-gray-300">
+          Don’t have a QR scanner?{" "}
+          <a
+            href="https://qrco.de/bg1oV0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-400 hover:text-blue-300"
+          >
+            Click here to download the APK
+          </a>
+        </p>
       </div>
-      <p className="mt-4 text-sm text-gray-300">
-        Don’t have a QR scanner? <a href="https://qrco.de/bg1oV0" target="_blank" className="underline text-blue-400">Click here to download</a>
-      </p>
     </section>
   )
 }
