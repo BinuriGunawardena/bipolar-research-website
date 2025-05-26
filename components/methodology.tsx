@@ -1,3 +1,5 @@
+"use client"
+
 export function Methodology() {
   const steps = [
     {
@@ -30,10 +32,9 @@ export function Methodology() {
     },
   ]
 
-
   return (
     <section id="methodology" className="py-20 px-6 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-16 text-center animate-fade-in">
           <h2 className="text-5xl font-semibold text-gray-900 mb-4">Our Methodological Approach</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -41,7 +42,8 @@ export function Methodology() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+          {/* Step Cards */}
           <div className="space-y-8">
             {steps.map((step, index) => (
               <div
@@ -63,12 +65,14 @@ export function Methodology() {
               </div>
             ))}
           </div>
-          <div className="flex justify-center animate-fade-in" style={{ animationDelay: "600ms" }}>
-            <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
+
+          {/* Horizontal Scrollable Image */}
+          <div className="w-full overflow-x-auto animate-fade-in mt-20" style={{ animationDelay: "600ms" }}>
+            <div className="min-w-[800px] flex justify-center bg-white p-4 rounded-2xl shadow-xl">
               <img
-                src="/placeholder.svg?height=300&width=300"
+                src="/images/methodology.jpeg"
                 alt="Methodology Diagram"
-                className="rounded-xl opacity-80 hover:opacity-100 transition-opacity"
+                className="rounded-lg max-w-full h-auto"
               />
             </div>
           </div>

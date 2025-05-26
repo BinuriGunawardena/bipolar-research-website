@@ -293,14 +293,14 @@ export function Documents() {
         </h2>
 
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-purple-700 mb-8 animate-fade-in">📄 Documents</h3>
+          <h3 className="text-2xl font-semibold text-purple-700 mb-8 animate-fade-in">Documents</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {documents.map((doc, index) => renderItemCard(doc, index, false))}
           </div>
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-blue-700 mb-8 animate-fade-in">🎯 Presentations</h3>
+          <h3 className="text-2xl font-semibold text-blue-700 mb-8 animate-fade-in">Presentations</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {presentations.map((presentation, index) => renderItemCard(presentation, index, true))}
           </div>
