@@ -171,7 +171,7 @@ export function Documents() {
       members: "All Members",
       color: "from-purple-400 to-violet-500",
       filePath: "/presentations/final-presentation.pptx",
-      externalUrl: "https://docs.google.com/presentation/d/1q4nhbPT1gTwttx7C3kzskN0epwkjBPkW/edit?usp=drive_link&ouid=103923215809507449603&rtpof=true&sd=true",
+      externalUrl: "https://docs.google.com/presentation/d/1KxU1HdWxbr0UnYwZIM4yYlS4QYNE2Sdb/edit?usp=drive_link&ouid=103923215809507449603&rtpof=true&sd=true",
       fileSize: "16.7 MB",
       downloadMethod: "external",
       category: "presentation",

@@ -95,22 +95,28 @@ export function Contact() {
           </form>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-  {/* Email - Left */}
-  <div className="text-center group animate-fade-in md:col-start-1" style={{ animationDelay: "400ms" }}>
-    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-      <Mail className="h-6 w-6 text-white" />
-    </div>
-    <p className="text-gray-600 text-sm">bipolink25@gmail.com</p>
-  </div>
+            {/* Email - Left */}
+            <div className="text-center group animate-fade-in md:col-start-1" style={{ animationDelay: "400ms" }}>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                <Mail className="h-6 w-6 text-white" />
+              </div>
+              <a
+                href="mailto:bipolink25@gmail.com"
+                className="text-gray-600 text-sm hover:text-blue-600 transition-colors duration-200"
+              >
+                bipolink25@gmail.com
+              </a>
 
-  {/* Institute - Right */}
-  <div className="text-center group animate-fade-in md:col-start-3" style={{ animationDelay: "600ms" }}>
-    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-      <MapPin className="h-6 w-6 text-white" />
-    </div>
-    <p className="text-gray-600 text-sm">Sri Lanka Institute of Information Technology</p>
-  </div>
-</div>
+            </div>
+
+            {/* Institute - Right */}
+            <div className="text-center group animate-fade-in md:col-start-3" style={{ animationDelay: "600ms" }}>
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                <MapPin className="h-6 w-6 text-white" />
+              </div>
+              <p className="text-gray-600 text-sm">Sri Lanka Institute of Information Technology</p>
+            </div>
+          </div>
 
         </div>
       </div>
