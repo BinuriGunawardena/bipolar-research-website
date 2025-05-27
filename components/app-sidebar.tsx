@@ -2,7 +2,7 @@
 
 import type * as React from "react"
 import {
-  Brain, FileText, Users, Phone, Target, Wrench, Calendar, Home, Smartphone
+  Brain, FileText, Users, Phone, Target, Wrench, Calendar, Home, Smartphone, Box
 } from "lucide-react"
 
 import {
@@ -19,6 +19,7 @@ import {
 const navigationItems = [
   { title: "Home", url: "#home", icon: Home, color: "text-purple-600" },
   { title: "Introduction", url: "#introduction", icon: Brain, color: "text-blue-600" },
+  { title: "Components", url: "#main-components", icon: Box, color: "text-green-600" },
   { title: "Methodology", url: "#methodology", icon: Target, color: "text-green-600" },
   { title: "Technologies", url: "#technologies", icon: Wrench, color: "text-orange-600" },
   { title: "Milestones", url: "#milestones", icon: Calendar, color: "text-red-600" },
