@@ -49,7 +49,7 @@ export function Contact() {
     <section id="contact" className="py-20 px-6 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-16 text-center animate-fade-in font-serif">
-          CONTACT</h2>
+          CONTACT US</h2>
         <div className="bg-white rounded-2xl shadow-2xl p-8 animate-slide-up">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="animate-slide-in">

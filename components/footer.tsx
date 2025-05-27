@@ -52,7 +52,7 @@ export function Footer() {
           </div>
 
           <div className="animate-slide-in" style={{ animationDelay: "400ms" }}>
-            <h4 className="text-lg font-semibold mb-4 text-purple-300">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4 text-purple-300">Contact Us</h4>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300">
                 <Mail className="h-4 w-4" />
