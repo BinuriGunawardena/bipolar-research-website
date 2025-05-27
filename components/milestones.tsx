@@ -1,6 +1,7 @@
 export function Milestones() {
   const milestones = [
-    { date: "Aug 2024", name: "Project Proposal", marks: "6 marks", status: "completed", color: "bg-green-500" },
+    { date: "Jul 2024", name: "Project Proposal", marks: "0 marks", status: "completed", color: "bg-green-500" },
+    { date: "Sep 2024", name: "Topic Assessment Form", marks: "6 marks", status: "completed", color: "bg-green-500" },
     { date: "Dec 2024", name: "Progress Presentation 1", marks: "6 marks", status: "completed", color: "bg-green-500" },
     {
       date: "Mar 2025",
@@ -10,15 +11,16 @@ export function Milestones() {
       color: "bg-green-500",
     },
     { date: "Mar 2025", name: "Research Paper", marks: "10 marks", status: "completed", color: "bg-green-500" },
-    { date: "Apr 2025", name: "Final Report", marks: "19 marks", status: "completed", color: "bg-blue-500" },
-    { date: "May 2025", name: "Website Assessment", marks: "2 marks", status: "current", color: "bg-blue-100" },
+    { date: "Apr 2025", name: "Final Report", marks: "19 marks", status: "completed", color: "bg-green-500" },
     {
       date: "May 2025",
       name: "Final Presentation & Viva",
       marks: "20 marks",
-      status: "current",
+      status: "completed",
       color: "bg-blue-100",
     },
+    { date: "May 2025", name: "Website Assessment", marks: "2 marks", status: "current", color: "bg-blue-100" },
+    
     { date: "Jun 2025", name: "LogBook", marks: "3 marks", status: "upcoming", color: "bg-gray-300" },
   ]
 
@@ -77,7 +79,7 @@ export function Milestones() {
               >
                 {milestone.status.toUpperCase()}
               </span>
-              <span className="text-purple-600 font-bold text-sm">{milestone.marks}</span>
+              {/* <span className="text-purple-600 font-bold text-sm">{milestone.marks}</span> */}
             </div>
           </div>
         ))}

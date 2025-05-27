@@ -15,27 +15,27 @@ export function Contact() {
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
+    e.preventDefault()
 
-  const response = await fetch("https://formspree.io/f/xrbqwzke", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    }),
-  })
+    const response = await fetch("https://formspree.io/f/xrbqwzke", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    })
 
-  if (response.ok) {
-    alert("Thank you for your message!")
-    setFormData({ name: "", email: "", message: "" })
-  } else {
-    alert("Something went wrong. Please try again.")
+    if (response.ok) {
+      alert("Thank you for your message!")
+      setFormData({ name: "", email: "", message: "" })
+    } else {
+      alert("Something went wrong. Please try again.")
+    }
   }
-}
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -48,7 +48,8 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 px-6 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl font-light text-gray-900 mb-16 text-center animate-fade-in">Contact</h2>
+        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-16 text-center animate-fade-in font-serif">
+          CONTACT</h2>
         <div className="bg-white rounded-2xl shadow-2xl p-8 animate-slide-up">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="animate-slide-in">
@@ -94,25 +95,23 @@ export function Contact() {
           </form>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center group animate-fade-in" style={{ animationDelay: "400ms" }}>
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                <Mail className="h-6 w-6 text-white" />
-              </div>
-              <p className="text-gray-600 text-sm">bipolar.tracker@sliit.lk</p>
-            </div>
-            <div className="text-center group animate-fade-in" style={{ animationDelay: "500ms" }}>
-              <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-cyan-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                <Phone className="h-6 w-6 text-white" />
-              </div>
-              <p className="text-gray-600 text-sm">+94 11 754 4801</p>
-            </div>
-            <div className="text-center group animate-fade-in" style={{ animationDelay: "600ms" }}>
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                <MapPin className="h-6 w-6 text-white" />
-              </div>
-              <p className="text-gray-600 text-sm">Sri Lanka Institute of Information Technology</p>
-            </div>
-          </div>
+  {/* Email - Left */}
+  <div className="text-center group animate-fade-in md:col-start-1" style={{ animationDelay: "400ms" }}>
+    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+      <Mail className="h-6 w-6 text-white" />
+    </div>
+    <p className="text-gray-600 text-sm">bipolink25@gmail.com</p>
+  </div>
+
+  {/* Institute - Right */}
+  <div className="text-center group animate-fade-in md:col-start-3" style={{ animationDelay: "600ms" }}>
+    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mx-auto mb-3 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+      <MapPin className="h-6 w-6 text-white" />
+    </div>
+    <p className="text-gray-600 text-sm">Sri Lanka Institute of Information Technology</p>
+  </div>
+</div>
+
         </div>
       </div>
     </section>

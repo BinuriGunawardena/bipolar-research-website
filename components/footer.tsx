@@ -56,12 +56,12 @@ export function Footer() {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">bipolar.tracker@sliit.lk</span>
+                <span className="text-sm">bipolink25@gmail.com</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
+              {/* <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+94 11 754 4801</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-300">
                 <MapPin className="h-4 w-4" />
                 <span className="text-sm">Sri Lanka Institute of Information Technology</span>
