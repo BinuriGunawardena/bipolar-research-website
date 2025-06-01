@@ -1,6 +1,6 @@
 "use client"
 import { FaPython, FaJava, FaFigma, FaAndroid, FaGithub } from "react-icons/fa"
-import { SiFirebase, SiGooglecolab, SiKotlin, SiTailwindcss} from "react-icons/si"
+import { SiFirebase, SiGooglecolab, SiKotlin, SiTailwindcss } from "react-icons/si"
 import { DiVisualstudio } from "react-icons/di"
 
 
@@ -21,9 +21,12 @@ export function Technologies() {
   return (
     <section id="technologies" className="py-20 px-6 bg-gradient-to-br from-white via-gray-50 to-slate-100">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center animate-fade-in">
+        <h2
+          className="text-5xl font-extrabold mb-16 text-center bg-gradient-to-r from-slate-700 via-blue-700 to-teal-500 bg-clip-text text-transparent font-serif tracking-tight drop-shadow-md animate-slide-in-down"
+        >
           🛠 Technologies We Used
         </h2>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
           {technologies.map((tech, index) => (
             <div

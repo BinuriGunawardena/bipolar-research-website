@@ -51,12 +51,16 @@ export function Introduction() {
       className="py-20 px-6 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="mb-12 text-center animate-fade-in">
-  <h2 className="text-5xl font-semibold text-gray-900 mb-4">Understanding the Vision</h2>
-  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-    A transformative approach to mood monitoring and bipolar disorder management through AI and passive data insights.
-  </p>
-</div>
+         <div className="mb-16 text-center animate-fade-in">
+          <h2
+            className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent animate-slide-in-down font-serif tracking-tight  decoration-pink-300 decoration-4"
+          >
+            Understanding the Vision
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-2xl mx-auto animate-fade-in">
+            Transformative approach to mood monitoring and bipolar disorder management through AI and passive data insights.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-12">
           {/* Problem */}

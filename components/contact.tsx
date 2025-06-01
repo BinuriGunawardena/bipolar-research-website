@@ -48,8 +48,12 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 px-6 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-16 text-center animate-fade-in font-serif">
-          CONTACT US</h2>
+        <h2
+          className="text-5xl font-extrabold mb-12 bg-gradient-to-r from-blue-500 via-cyan-600 to-purple-600 bg-clip-text text-transparent animate-slide-in-down font-serif tracking-wide drop-shadow-lg text-center"
+        >
+          CONTACT US
+        </h2>
+
         <div className="bg-white rounded-2xl shadow-2xl p-8 animate-slide-up">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="animate-slide-in">

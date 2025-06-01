@@ -4,6 +4,7 @@ import { AppSidebar } from "./components/app-sidebar"
 import { Header } from "./components/header"
 import { Introduction } from "./components/introduction"
 import { MainComponents } from "./components/features"
+import { LiteratureReview } from "./components/literature-review"
 import { Methodology } from "./components/methodology"
 import { Technologies } from "./components/technologies"
 import { Milestones } from "./components/milestones"
@@ -85,6 +86,7 @@ export default function App() {
             <Header />
             <Introduction />
             <MainComponents />
+            <LiteratureReview />
             <Methodology />
             <Technologies />
             <Milestones />

@@ -288,19 +288,30 @@ export function Documents() {
   return (
     <section id="documents" className="py-20 px-6 bg-gradient-to-br from-cyan-50 via-indigo-50 to-pink-50">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center animate-fade-in">
-        Documents & Presentations
+        <h2
+          className="text-5xl font-extrabold mb-16 text-center bg-gradient-to-r from-cyan-600 via-indigo-500 to-pink-500 bg-clip-text text-transparent font-serif tracking-tight drop-shadow-lg animate-slide-in-down"
+        >
+          Documents & Presentations
         </h2>
 
+
         <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-purple-700 mb-8 animate-fade-in">Documents</h3>
+          <h3
+            className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 text-center font-serif tracking-wide animate-slide-in-down"
+          >
+            Documents
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {documents.map((doc, index) => renderItemCard(doc, index, false))}
           </div>
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-blue-700 mb-8 animate-fade-in">Presentations</h3>
+          <h3
+            className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-8 text-center font-serif tracking-wide animate-slide-in-down"
+          >
+            Presentations
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {presentations.map((presentation, index) => renderItemCard(presentation, index, true))}
           </div>

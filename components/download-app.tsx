@@ -16,7 +16,11 @@ export function DownloadApp() {
 
       {/* Content over background */}
       <div className="relative z-10 max-w-3xl mx-auto">
-        <h2 className="text-4xl font-semibold mb-4">Download Our App</h2>
+        <h2
+          className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 bg-clip-text text-transparent animate-slide-in-down font-serif tracking-wide drop-shadow-lg"
+        >
+          Download Our App
+        </h2>
         <p className="text-lg text-gray-200 mb-8">
           Scan the QR code below to download the BipoLink mobile app for Android.
         </p>
