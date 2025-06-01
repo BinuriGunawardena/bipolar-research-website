@@ -242,7 +242,7 @@ export function MainComponents() {
                         controls
                         style={{ objectFit: 'cover', borderRadius: '0 0 16px 16px' }}
                     >
-                        <source src="/videos/recommendations.mp4" type="video/mp4" />
+                        <source src="/videos/Recommendations.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
