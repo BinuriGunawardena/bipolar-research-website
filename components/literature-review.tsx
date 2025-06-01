@@ -17,9 +17,9 @@ export function LiteratureReview() {
           <br /><br />
           In audio-based emotion recognition, past efforts relied on phone call recordings <sup>[3]</sup>, raising privacy concerns. Our solution avoids this by analyzing voice tone, pitch, and rhythm in ethical, user-consented conversations with the assistant.
           <br /><br />
-          Most mental health tech lacks **personalized, dynamic interventions**. Traditional systems focus on static tracking, whereas our approach adapts in real-time based on historical and multi-modal data <sup>[2][4]</sup>.
+          Most mental health tech lacks personalized, dynamic interventions. Traditional systems focus on static tracking, whereas our approach adapts in real-time based on historical and multi-modal data <sup>[2][4]</sup>.
           <br /><br />
-          Using **data fusion**, we combine speech, video, browsing, and motion data. Deep learning models like **LSTM** and **CNNs** enhance prediction accuracy by analyzing patterns across modalities. Ensemble methods ensure robustness even with partial data <sup>[5][6]</sup>.
+          Using data fusion, we combine speech, video, browsing, and motion data. Deep learning models like LSTM and CNNs enhance prediction accuracy by analyzing patterns across modalities. Ensemble methods ensure robustness even with partial data <sup>[5][6]</sup>.
           <br /><br />
           This real-time, adaptive, and privacy-conscious approach bridges the gap between emotion detection and actionable mental health support <sup>[7]</sup>.
         </p>
