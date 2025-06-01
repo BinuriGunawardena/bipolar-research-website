@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
@@ -15,6 +15,34 @@ export function MainComponents() {
 
     const handleOpenVideo3 = () => setOpenVideo3(true);
     const handleCloseVideo3 = () => setOpenVideo3(false);
+
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+    const videoSources = [
+        "/videos/PassiveDataCapture.mp4",
+        "/videos/PassiveBrowserCaptureFollowUp.mp4"
+    ];
+
+    useEffect(() => {
+        if (!openVideo2) {
+            setCurrentVideoIndex(0);
+        }
+    }, [openVideo2]);
+
+    const handleVideoEnded = () => {
+  if (currentVideoIndex < videoSources.length - 1) {
+    const nextIndex = currentVideoIndex + 1;
+    setCurrentVideoIndex(nextIndex);
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.src = videoSources[nextIndex];
+      videoElement.play();
+    }
+  }
+};
+
     return (
         <section
             id="main-components"
@@ -150,7 +178,7 @@ export function MainComponents() {
                         controls
                         style={{ objectFit: 'cover', borderRadius: '0 0 16px 16px' }}
                     >
-                        <source src="/videos/emotionRecognition.mp4" type="video/mp4" />
+                        <source src="/videos/EmotionRecognition.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
@@ -191,16 +219,20 @@ export function MainComponents() {
                     }}
                 >
                     <video
+                        ref={videoRef}
                         width="100%"
                         height="100%"
                         controls
+                        autoPlay
+                        onEnded={handleVideoEnded}
                         style={{ objectFit: 'cover', borderRadius: '0 0 16px 16px' }}
                     >
-                        <source src="/videos/passiveData.mp4" type="video/mp4" />
+                        <source src={videoSources[currentVideoIndex]} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
             </Dialog>
+
 
             <Dialog
                 open={openVideo3}
