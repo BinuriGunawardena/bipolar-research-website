@@ -21,8 +21,8 @@ export function MainComponents() {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
     const videoSources = [
-        "/videos/PassiveDataCapture.mp4",
-        "/videos/PassiveBrowserCaptureFollowUp.mp4"
+        "PassiveDataCapture.mp4",
+        "PassiveBrowserCaptureFollowUp.mp4"
     ];
 
     useEffect(() => {
@@ -32,16 +32,16 @@ export function MainComponents() {
     }, [openVideo2]);
 
     const handleVideoEnded = () => {
-  if (currentVideoIndex < videoSources.length - 1) {
-    const nextIndex = currentVideoIndex + 1;
-    setCurrentVideoIndex(nextIndex);
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.src = videoSources[nextIndex];
-      videoElement.play();
-    }
-  }
-};
+        if (currentVideoIndex < videoSources.length - 1) {
+            const nextIndex = currentVideoIndex + 1;
+            setCurrentVideoIndex(nextIndex);
+            const videoElement = videoRef.current;
+            if (videoElement) {
+                videoElement.src = videoSources[nextIndex];
+                videoElement.play();
+            }
+        }
+    };
 
     return (
         <section
@@ -138,7 +138,7 @@ export function MainComponents() {
 
                 </div>
             </div>
-            <Dialog
+            {/* <Dialog
                 open={openVideo1}
                 onClose={handleCloseVideo1}
                 maxWidth={false}
@@ -178,7 +178,7 @@ export function MainComponents() {
                         controls
                         style={{ objectFit: 'cover', borderRadius: '0 0 16px 16px' }}
                     >
-                        <source src="/videos/EmotionRecognition.mp4" type="video/mp4" />
+                        <source src="/EmotionRecognition.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
@@ -274,11 +274,11 @@ export function MainComponents() {
                         controls
                         style={{ objectFit: 'cover', borderRadius: '0 0 16px 16px' }}
                     >
-                        <source src="/videos/Recommendations.mp4" type="video/mp4" />
+                        <source src="/Recommendations.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
-            </Dialog>
+            </Dialog> */}
 
 
         </section>
